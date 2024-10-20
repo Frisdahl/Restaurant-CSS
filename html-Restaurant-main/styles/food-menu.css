@@ -1,0 +1,66 @@
+.menu-section {
+  width: 90%;
+  display: grid;
+  margin-top: 15px;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(250px, auto);
+}
+
+.meal-article {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: var(--productBG);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.recipe-content {
+  > * {
+    margin-top: 15px;
+  }
+}
+
+.food-img-ctn {
+  width: 100%;
+  max-height: 100%;
+}
+
+.food-img {
+  border-radius: 10px;
+}
+
+.price {
+  background-color: var(--mainColor);
+  width: fit-content;
+  padding: 10px;
+  border: 3px solid var(--secondaryColor);
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .meal-article {
+    display: flex;
+    flex-direction: row;
+    min-width: 500;
+  }
+
+  .food-img-ctn {
+    width: 50%;
+    max-height: 100%;
+    margin-left: 15px;
+  }
+
+  .recipe-content {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1140px) {
+  .menu-section {
+    width: 75%;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,144 @@
+:root {
+  --mainColor: #eb5147;
+  --secondaryColor: #27354a;
+  --yellowColor: #cec69a;
+
+  --productBG: #fafad2;
+
+  --fontFamily: "Fira Sans", sans-serif;
+
+  --h1FontSize: 2em;
+
+  --marginSmall: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--fontFamily);
+}
+
+h1 {
+  font-size: var(--h1FontSize);
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-header {
+  background-color: var(--mainColor);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.main-heading-ctn {
+  text-align: center;
+  width: 90%;
+  padding: 15px;
+  color: #fff;
+}
+
+.main-nav {
+  background-color: var(--secondaryColor);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  a {
+    font-size: 1.25em;
+    color: #fff;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  ul {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+      margin-top: 5px;
+    }
+
+    li {
+      text-align: center;
+      width: 100%;
+      list-style-type: none;
+      border-bottom: 1px solid #fff;
+    }
+    .active-link {
+      color: var(--yellowColor);
+      font-size: 1.2em;
+      font-weight: 800;
+      border-bottom: none;
+    }
+  }
+}
+
+fieldset {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  > * {
+    margin-top: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 10vh;
+  }
+}
+
+footer {
+  width: 100%;
+  margin-top: var(--marginSmall);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3vh;
+  background-color: var(--secondaryColor);
+  color: #fff;
+  margin-top: 15px;
+
+  #copyright {
+    font-size: 0.75em;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-heading-ctn {
+    text-align: left;
+  }
+  .main-nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        width: fit-content;
+        padding: 10px;
+        border: none;
+      }
+    }
+  }
+}
